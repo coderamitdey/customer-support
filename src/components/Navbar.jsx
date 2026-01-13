@@ -1,67 +1,72 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
+  const [open, setOpen] = useState(false);
+
+  const navLinks = [
+    { name: "Home", path: "/" },
+    { name: "FAQ", path: "/faq" },
+    { name: "Changelog", path: "/changelog" },
+    { name: "Blog", path: "/blog" },
+    { name: "Download", path: "/download" },
+    { name: "Contact", path: "/contact" },
+  ];
+
   return (
-    <div className="shadow-sm">
-      <div className="navbar bg-base-100 container mx-auto">
-        {/* Left: Logo */}
-        <div className="navbar-start">
-          <a className="btn btn-ghost normal-case text-xl">CS Zone</a>
+    <nav className="w-full shadow-md">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center">
+        {/* LEFT: Hamburger + Logo */}
+        <div className="flex items-center gap-3">
+          <button className="md:hidden" onClick={() => setOpen(!open)}>
+            {open ? <X size={26} /> : <Menu size={26} />}
+          </button>
+
+          <h1 className="text-3xl text-orange-500 font-bold">
+            Cs-Ticket System
+          </h1>
         </div>
 
-        {/* Center: Menu for md+ */}
-        <div className="navbar-center hidden md:flex">
-          <ul className="menu menu-horizontal px-1">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Changelog</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Download</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </div>
-
-        {/* Right: New Ticket button + Mobile Hamburger */}
-        <div className="navbar-end">
-          {/* Desktop Button */}
-          <div className="hidden md:block">
-            <button className="btn btn-primary">New Ticket</button>
-          </div>
-
-          {/* Mobile Hamburger */}
-          <div className="dropdown md:hidden">
-            <label tabIndex={0} className="btn btn-ghost">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+        {/* CENTER: Links (md+) */}
+        <ul className="hidden md:flex mx-auto gap-6">
+          {navLinks.map((link) => (
+            <li key={link.name}>
+              <Link
+                to={link.path}
+                className="hover:text-primary transition-colors duration-200"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </label>
-            <ul
-              tabIndex={0}
-              className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
-            >
-              <li><a href="#">Home</a></li>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">Changelog</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Download</a></li>
-              <li><a href="#">Contact</a></li>
-              <li><button className="btn btn-primary w-full mt-2">New Ticket</button></li>
-            </ul>
-          </div>
+                {link.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+
+        {/* RIGHT: Button (ALL screens) */}
+        <div className="ml-auto">
+          <button className="btn btn-primary">+ New Ticket</button>
         </div>
       </div>
-    </div>
+
+      {/* MOBILE MENU (links only) */}
+      {open && (
+        <div className="md:hidden px-6 pb-4">
+          <ul className="flex flex-col gap-4">
+            {navLinks.map((link) => (
+              <li key={link.name}>
+                <Link
+                  to={link.path}
+                  onClick={() => setOpen(false)}
+                  className="block hover:text-primary transition-colors duration-200"
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </nav>
   );
 };
 
