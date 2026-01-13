@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "title": "Login Issue",
+    "description": "Cannot login with correct credentials",
+    "customer": "John Doe",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2026-01-12"
+  },
+  {
+    "id": 2,
+    "title": "Payment Failed",
+    "description": "Transaction not going through",
+    "customer": "Jane Smith",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2026-01-11"
+  },
+  {
+    "id": 3,
+    "title": "Account Locked",
+    "description": "User account locked after multiple login attempts",
+    "customer": "Mike Johnson",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2026-01-10"
+  },
+  {
+    "id": 4,
+    "title": "Forgot Password",
+    "description": "Password reset link not working",
+    "customer": "Emily Davis",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2026-01-09"
+  },
+  {
+    "id": 5,
+    "title": "Error 404 on Dashboard",
+    "description": "Dashboard page not loading after login",
+    "customer": "Chris Lee",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2026-01-08"
+  },
+  {
+    "id": 6,
+    "title": "Refund Request",
+    "description": "Customer requesting refund for wrong product",
+    "customer": "Anna Brown",
+    "priority": "Low",
+    "status": "In Progress",
+    "createdAt": "2026-01-07"
+  },
+  {
+    "id": 7,
+    "title": "App Crash",
+    "description": "Mobile app crashes when opening profile page",
+    "customer": "David Wilson",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2026-01-06"
+  },
+  {
+    "id": 8,
+    "title": "Unable to Upload File",
+    "description": "File upload fails with unknown error",
+    "customer": "Sophia Martinez",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2026-01-05"
+  },
+  {
+    "id": 9,
+    "title": "Notification Not Received",
+    "description": "User not getting email notifications",
+    "customer": "James Anderson",
+    "priority": "Low",
+    "status": "In Progress",
+    "createdAt": "2026-01-04"
+  },
+  {
+    "id": 10,
+    "title": "Slow Loading",
+    "description": "Website loads very slowly on Safari",
+    "customer": "Olivia Thomas",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2026-01-03"
+  },
+  {
+    "id": 11,
+    "title": "Incorrect Invoice",
+    "description": "Invoice shows wrong total amount",
+    "customer": "Liam Jackson",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2026-01-02"
+  },
+  {
+    "id": 12,
+    "title": "Broken Link",
+    "description": "Terms & Conditions link broken",
+    "customer": "Mia White",
+    "priority": "Low",
+    "status": "In Progress",
+    "createdAt": "2026-01-01"
+  },
+  {
+    "id": 13,
+    "title": "Profile Picture Not Updating",
+    "description": "User cannot change profile picture",
+    "customer": "Ethan Harris",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2025-12-31"
+  },
+  {
+    "id": 14,
+    "title": "Subscription Issue",
+    "description": "User charged twice for monthly subscription",
+    "customer": "Ava Martin",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2025-12-30"
+  },
+  {
+    "id": 15,
+    "title": "Chat Not Working",
+    "description": "Live chat not responding on support page",
+    "customer": "Noah Lewis",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2025-12-29"
+  }
+]
