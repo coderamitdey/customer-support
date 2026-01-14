@@ -26,7 +26,17 @@ const TicketCard = ({ ticket, onClick }) => {
       <div className="flex justify-between text-sm mt-3">
         <div className="flex gap-2">
           <span>#{ticket.id}</span>
-          <span className="text-red-600">{ticket.priority}</span>
+          <span
+            className={`${
+              ticket.priority === "High"
+                ? "text-red-600"
+                : ticket.priority === "Medium"
+                ? "text-yellow-500"
+                : "text-green-600"
+            }`}
+          >
+            {ticket.priority}
+          </span>
         </div>
 
         <div className="font-semibold">
